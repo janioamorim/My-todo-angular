@@ -1,4 +1,6 @@
-import { HeaderService } from '../header.service';
+//criação da parte visual do cabeçalho
+
+import { HeaderService } from './header.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
