@@ -1,4 +1,4 @@
-import { Product } from "./../product.model";
+import { Product } from "src/app/model/produto";
 import { Router, ActivatedRoute } from "@angular/router";
 import { ProductService } from "src/app/services/produto.service";
 import { Component, OnInit } from "@angular/core";
@@ -9,7 +9,7 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./product-update.component.css"],
 })
 export class ProductUpdateComponent implements OnInit {
-  product: Product;
+  product!: Product;
 
   constructor(
     private productService: ProductService,
@@ -18,7 +18,7 @@ export class ProductUpdateComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const id = + this.route.snapshot.paramMap.get("id");
+    const id = +this.route.snapshot.paramMap.get("id");
     this.productService.readById(id).subscribe((product) => {
       this.product = product;
     });
