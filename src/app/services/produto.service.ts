@@ -20,16 +20,16 @@ export class ProductService {
           catchError((e) => this.errorHandler(e))
         );
       }
-  
+
     create(produto: Produto): Observable<Produto> {
       return this.http.post<Produto>(this.baseUrl, produto).pipe(
         map((obj) => obj),
         catchError((e) => this.errorHandler(e))
       );
-    } 
+    }
 
-    errorHandler(e: any): Observable<any> {       
+    errorHandler(e: any): Observable<any> {
         return EMPTY;
-      }
-    
+    }
+
   }
