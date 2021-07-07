@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -9,7 +9,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './views/home/home.component';
 import { ProductComponent } from './views/product/product.component';
 
-
 //importação dos componentes material
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from  '@angular/material/sidenav';
@@ -18,9 +17,7 @@ import { MatCardModule } from '@angular/material/card';
 import { ProductDeleteComponent } from './Components/Product/product-delete/product-delete.component';
 import { ProductReadComponent } from './Components/Product/product-read/product-read.component';
 import { ProductUpdateComponent } from './Components/Product/product-update/product-update.component';
-
-
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -41,10 +38,11 @@ import { ProductUpdateComponent } from './Components/Product/product-update/prod
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    MatCardModule
-
+    MatCardModule,
+    FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
