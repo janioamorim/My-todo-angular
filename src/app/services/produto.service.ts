@@ -1,8 +1,9 @@
 import { Injectable } from "@angular/core";
 import { EMPTY, Observable } from "rxjs";
-import { Produto } from "../model/produto";
+import { Product } from "../model/produto";
 import { HttpClient } from "@angular/common/http";
 import { map, catchError } from "rxjs/operators";
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 @Injectable({
@@ -10,19 +11,19 @@ import { map, catchError } from "rxjs/operators";
 })
 
 export class ProductService {
-    baseUrl = "http://localhost:3000/produtos";
+    baseUrl = "http://localhost:3000/products";
 
-    constructor(private http: HttpClient) {}
+    constructor(private http: HttpClient, private snackBar: MatSnackBar,) {}
 
-    read(): Observable<Produto[]> {
-        return this.http.get<Produto[]>(this.baseUrl).pipe(
+    read(): Observable<Product[]> {
+        return this.http.get<Product[]>(this.baseUrl).pipe(
           map((obj) => obj),
           catchError((e) => this.errorHandler(e))
         );
       }
 
-    create(produto: Produto): Observable<Produto> {
-      return this.http.post<Produto>(this.baseUrl, produto).pipe(
+    create(product: Product): Observable<Product> {
+      return this.http.post<Product>(this.baseUrl, product).pipe(
         map((obj) => obj),
         catchError((e) => this.errorHandler(e))
       );

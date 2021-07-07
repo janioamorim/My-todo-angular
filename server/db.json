@@ -1,9 +1,14 @@
 {
-    "produtos": [
-      {
-        "name": "Janio Amorim",
-        "price": "25.60",
-        "id": 1
-      }
-    ]
-  }
+  "products": [   
+    {
+      "name": "Café",
+      "price": "25.60",
+      "id": 2
+    },
+    {
+      "name": "Café 2",
+      "price": "25.60",
+      "id": 3
+    }
+  ]
+}

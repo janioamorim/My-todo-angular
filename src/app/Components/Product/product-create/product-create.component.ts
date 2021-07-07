@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from 'src/app/services/produto.service';
 import { Router } from '@angular/router';
-import { Produto } from 'src/app/model/produto';
+import { Product } from 'src/app/model/produto';
 
 @Component({
   selector: 'app-product-create',
@@ -11,7 +11,7 @@ import { Produto } from 'src/app/model/produto';
 export class ProductCreateComponent implements OnInit {
 
   //Fazendo Casting do nosso produto
-  produto: Produto = { name:'', price: 0 }
+  produto: Product = { name:'', price: 0 }
 
   constructor(
      private restApi: ProductService,
