@@ -10,7 +10,7 @@ import { ProductService } from 'src/app/services/produto.service';
 })
 export class ProductCreateComponent implements OnInit {
 
-  product? Product = {
+  product: Product = {
     name: '',
     price: 0
   }
