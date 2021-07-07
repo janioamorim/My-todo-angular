@@ -15,6 +15,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from  '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
+import { ProductDeleteComponent } from './Components/Product/product-delete/product-delete.component';
+import { ProductReadComponent } from './Components/Product/product-read/product-read.component';
+import { ProductRead2Component } from './Components/Product/product-read2/product-read2.component';
+import { ProductUpdateComponent } from './Components/Product/product-update/product-update.component';
 
 
 
@@ -26,6 +30,10 @@ import { MatCardModule } from '@angular/material/card';
     NavComponent,
     HomeComponent,
     ProductComponent,
+    ProductDeleteComponent,
+    ProductReadComponent,
+    ProductRead2Component,
+    ProductUpdateComponent,
 
   ],
   imports: [
