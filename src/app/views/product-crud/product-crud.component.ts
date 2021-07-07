@@ -1,11 +1,7 @@
 import { HeaderService } from 'src/app/Components/Template/header/header.service';
 import { Component, OnInit } from '@angular/core';
-<<<<<<< HEAD
 import { Router } from '@angular/router';
 import { HeaderService } from 'src/app/Components/Template/header/header.service';
-=======
-import { Router } from '@angular/router'
->>>>>>> f20cf573688c0009b7ebf302e2c560c621d1f4c5
 
 @Component({
   selector: 'app-product-crud',

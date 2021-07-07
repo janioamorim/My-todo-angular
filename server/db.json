@@ -1,13 +1,10 @@
 {
   "products": [
-<<<<<<< HEAD
     {
       "name": "Agua",
       "price": "2.60",
       "id": 1
     },
-=======
->>>>>>> 02c7eabcf945c5ebaba7646cae59f32d9a78319d
     {
       "name": "Café",
       "price": "25.60",
