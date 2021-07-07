@@ -17,7 +17,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from  '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
-
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -30,7 +29,7 @@ import { FormsModule } from '@angular/forms';
     ProductDeleteComponent,
     ProductReadComponent,
     ProductUpdateComponent,
-
+    ProductCreateComponent
   ],
   imports: [
     BrowserModule,
