@@ -1,5 +1,5 @@
 {
-  "products": [   
+  "products": [
     {
       "name": "Café",
       "price": "25.60",
@@ -9,6 +9,11 @@
       "name": "Café 2",
       "price": "25.60",
       "id": 3
+    },
+    {
+      "name": "",
+      "price": 0,
+      "id": 4
     }
   ]
 }
