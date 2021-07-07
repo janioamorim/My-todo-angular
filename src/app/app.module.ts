@@ -6,18 +6,27 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './Components/Template/header/header.component';
 import { NavComponent } from './Components/Template/nav/nav.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeComponent } from './views/home/home.component';
+import { ProductComponent } from './views/product/product.component';
 
 
 //importação dos componentes material
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from  '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    NavComponent
+    NavComponent,
+    HomeComponent,
+    ProductComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -25,7 +34,8 @@ import { MatListModule } from '@angular/material/list';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatCardModule
 
   ],
   providers: [],
