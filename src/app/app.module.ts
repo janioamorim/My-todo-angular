@@ -17,7 +17,7 @@ import { MatListModule } from '@angular/material/list';
   declarations: [
     AppComponent,
     HeaderComponent,
-    NavComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
