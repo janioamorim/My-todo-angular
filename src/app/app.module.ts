@@ -11,6 +11,7 @@ import { ProductComponent } from './views/product/product.component';
 import { ProductDeleteComponent } from './Components/Product/product-delete/product-delete.component';
 import { ProductReadComponent } from './Components/Product/product-read/product-read.component';
 import { ProductUpdateComponent } from './Components/Product/product-update/product-update.component';
+import { ProductCreateComponent } from './Components/Product/product-create/product-create.component';
 
 //importação dos componentes material
 import { MatToolbarModule } from '@angular/material/toolbar';
