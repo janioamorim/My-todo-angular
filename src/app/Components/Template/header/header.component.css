@@ -7,15 +7,15 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: #333;
+    color: #3F51B5;
 }
 
 .header .logo {
-    max-height: 32px;
+    max-height: 50px;
 }
 
 .header .title-group {
-    padding-left: 25px;
+    padding-left: 15px;
 }
 
 .header .title-group i {

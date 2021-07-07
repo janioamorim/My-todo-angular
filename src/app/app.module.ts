@@ -8,7 +8,6 @@ import { NavComponent } from './Components/Template/nav/nav.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
-
 //importação dos componentes material
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from  '@angular/material/sidenav';
