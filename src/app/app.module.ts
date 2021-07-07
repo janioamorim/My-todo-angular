@@ -14,6 +14,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from  '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
+import { ProductCreateComponent } from './Components/Product/product-create/product-create.component';
 import { ProductDeleteComponent } from './Components/Product/product-delete/product-delete.component';
 import { ProductReadComponent } from './Components/Product/product-read/product-read.component';
 import { ProductUpdateComponent } from './Components/Product/product-update/product-update.component';
@@ -29,7 +30,7 @@ import { FormsModule } from '@angular/forms';
     ProductDeleteComponent,
     ProductReadComponent,
     ProductUpdateComponent,
-
+    ProductCreateComponent
   ],
   imports: [
     BrowserModule,
