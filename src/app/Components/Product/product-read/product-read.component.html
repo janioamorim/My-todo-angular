@@ -6,19 +6,19 @@
       <td mat-cell *matCellDef="let row">{{row.id}}</td>
     </ng-container>
 
-    <!-- Name Column -->
+    <!-- Nome da coluna -->
     <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef>Name</th>
       <td mat-cell *matCellDef="let row">{{row.name}}</td>
     </ng-container>
 
-    <!-- Price Column -->
+    <!-- coluna do preço -->
     <ng-container matColumnDef="price">
       <th mat-header-cell *matHeaderCellDef>Preço</th>
       <td mat-cell *matCellDef="let row">{{ row.price | currency: 'BRL' }}</td>
     </ng-container>
 
-    <!-- Action Column -->
+    <!-- coluna de ações deletar e editar -->
     <ng-container matColumnDef="action">
       <th mat-header-cell *matHeaderCellDef>Ações</th>
       <td mat-cell *matCellDef="let row">

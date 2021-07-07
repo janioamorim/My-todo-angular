@@ -1,16 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Product } from 'src/app/model/produto';
-import { ProductService } from 'src/app/services/produto.service';
+import { Product } from "./../product.model";
+import { Router, ActivatedRoute } from "@angular/router";
+import { ProductService } from "src/app/services/produto.service";
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-product-update',
-  templateUrl: './product-update.component.html',
-  styleUrls: ['./product-update.component.css']
+  selector: "app-product-update",
+  templateUrl: "./product-update.component.html",
+  styleUrls: ["./product-update.component.css"],
 })
 export class ProductUpdateComponent implements OnInit {
-
-  product!: Product;
+  product: Product;
 
   constructor(
     private productService: ProductService,
@@ -19,17 +18,17 @@ export class ProductUpdateComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    //const id = +this.route.snapshot.paramMap.get("id");
-  //  this.productService.readById(id).subscribe((product) => {
-  //    this.product = product;
-  //  });
+    const id = + this.route.snapshot.paramMap.get("id");
+    this.productService.readById(id).subscribe((product) => {
+      this.product = product;
+    });
   }
 
   updateProduct(): void {
-   // this.productService.update(this.product).subscribe(() => {
-  //    this.productService.showMessage("Produto atualizado com sucesso!");
-   //   this.router.navigate(["/products"]);
-  //  });
+    this.productService.update(this.product).subscribe(() => {
+      this.productService.showMessage("Produto atualizado com sucesso!");
+      this.router.navigate(["/products"]);
+    });
   }
 
   cancel(): void {

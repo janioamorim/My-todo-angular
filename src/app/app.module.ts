@@ -7,12 +7,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //importação dos componentes
 import { HomeComponent } from './views/home/home.component';
 import { ProductComponent } from './views/product/product.component';
-import { ProductDeleteComponent } from './Components/Product/product-delete/product-delete.component';
 import { ProductReadComponent } from './Components/Product/product-read/product-read.component';
-import { ProductUpdateComponent } from './Components/Product/product-update/product-update.component';
-import { ProductCreateComponent } from './Components/Product/product-create/product-create.component';
 import { HeaderComponent } from './Components/Template/header/header.component';
 import { NavComponent } from './Components/Template/nav/nav.component';
+
+import { ProductUpdateComponent } from './Components/Product/product-update/product-update.component';
+import { ProductCreateComponent } from './Components/Product/product-create/product-create.component';
+import { ProductDeleteComponent } from './Components/Product/product-delete/product-delete.component';
 
 //importação dos componentes material
 import { MatToolbarModule } from '@angular/material/toolbar';
