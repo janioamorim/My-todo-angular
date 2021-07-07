@@ -3,24 +3,31 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './Components/Template/header/header.component';
+import { NavComponent } from './Components/Template/nav/nav.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-//importação Dos componentes de visualização
-import { HeaderComponent } from './TEMPLATE/header/header.component';
-import { NavComponent } from './TEMPLATE/nav/nav.component';
 
 
 //importação dos componentes material
-
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from  '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    NavComponent
+    NavComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
