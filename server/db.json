@@ -1,7 +1,6 @@
 {
   "products": [
     {
-<<<<<<< HEAD
       "name": "Agua",
       "price": "2.60",
       "id": 1,
@@ -12,20 +11,6 @@
       "price": "25.60",
       "id": 2,
       "type": "Bebida"
-    },
-    {
-=======
->>>>>>> e59d99100b66ecda804dd3661faeaca25b726252
-      "name": "Café 2",
-      "price": "25.60",
-      "id": 3,
-      "type": "Bebida"
-    },
-    {
-      "name": "",
-      "price": 0,
-      "type": "",
-      "id": 4
     }
   ]
 }
