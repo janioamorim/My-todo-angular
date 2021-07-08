@@ -9,15 +9,24 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./product-update.component.css"],
 })
 export class ProductUpdateComponent implements OnInit {
-  product!: Product;
 
+  //cria uma fotografia do momento atual
+  id = this.route.snapshot.params['id'];
+  //casting produto
+  product: any = {};
+
+  // Injecao dos
   constructor(
     private productService: ProductService,
     private router: Router,
     private route: ActivatedRoute
   ) {}
 
+  //Ao criar o component passar o Id com o nome do produto para fazer a deleção
   ngOnInit(): void {
+    this.productService.readById(this.id).subscribe((product) => {
+      this.product = product;
+    });
   }
 
   updateProduct(): void {

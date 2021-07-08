@@ -10,21 +10,26 @@ import { Component, OnInit } from "@angular/core";
 })
 export class ProductDeleteComponent implements OnInit {
 
+  //cria uma fotografia do momento atual
   id = this.route.snapshot.params['id'];
+  //casting produto
   product: any = {};
 
+  // Injecao dos
   constructor(
     private productService: ProductService,
     private router: Router,
     private route: ActivatedRoute
   ) {}
 
+  //Ao criar o component passar o Id com o nome do produto para fazer a deleção
   ngOnInit(): void {
     this.productService.readById(this.id).subscribe((product) => {
       this.product = product;
     });
   }
 
+  // deletar o produto por Id
   deleteProduct(): void {
     this.productService.delete(this.product.id).subscribe(() => {
       this.productService.showMessage("Produto excluido com sucesso!");
@@ -32,6 +37,7 @@ export class ProductDeleteComponent implements OnInit {
     });
   }
 
+  //cancelar e voltar para a lista de produtos
   cancel(): void {
     this.router.navigate(["/products"]);
   }
