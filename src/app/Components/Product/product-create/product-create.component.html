@@ -1,20 +1,31 @@
 <mat-card>
-  <mat-card-title>Novo Cadastro</mat-card-title>
-  <form>
+  <mat-card-title>Novo</mat-card-title>
+  <form (ngSubmit)="createProduct()" name="formData" [formGroup]="formData">
     <mat-form-field>
-      <input matInput [(ngModel)]="product.name" placeholder="Produto" name="nome">
+      <input matInput [(ngModel)]="product.name" formControlName="name" placeholder="Produto" >
+      <mat-error *ngIf="!formData.controls['name'].valid">
+        Produto é obrigatório!
+      </mat-error>
     </mat-form-field>
     <mat-form-field >
-       <input matInput [(ngModel)]="product.price" placeholder="Preço" name="price" >
+       <input matInput [(ngModel)]="product.price" formControlName="price" placeholder="Preço" >
+       <mat-error *ngIf="!formData.controls['price'].valid">
+        Preço é obrigatório!
+      </mat-error>
     </mat-form-field>
     <mat-form-field >
-      <input matInput [(ngModel)]="product.type" placeholder="Categoria" name="type" >
+      <input matInput [(ngModel)]="product.type" formControlName="type" placeholder="Categoria" >
+      <mat-error *ngIf="!formData.controls['type'].valid">
+        Categoria é obrigatória!
+      </mat-error>
    </mat-form-field>
+    <div layout-gt-sm="row">
+      <button mat-raised-button color="primary">
+         Salvar
+      </button>
+      <button mat-raised-button (click)="cancel()" >
+         Cancelar
+      </button>
+    </div>
   </form>
-  <button mat-raised-button (click)= "createProduct()" color="primary">
-     Salvar
-  </button>
-  <button mat-raised-button (click)="cancel()" >
-     Cancelar
-  </button>
 </mat-card>
