@@ -40,13 +40,15 @@ export class ProductService {
     );
   }
 
+  // Metodo get para listar os produtos
   read(): Observable<Product[]> {
     return this.http.get<Product[]>(this.baseUrl).pipe(
-      map((obj) => obj),
+      retry(1),
       catchError((e) => this.errorHandler(e))
     );
   }
 
+  //Metodo para listar por id
   readById(id: number): Observable<Product> {
     const url = `${this.baseUrl}/${id}`;
     return this.http.get<Product>(url).pipe(
