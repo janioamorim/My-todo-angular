@@ -1,9 +1,9 @@
 import { Injectable } from "@angular/core";
 import { MatSnackBar } from "@angular/material/snack-bar";
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Product } from "../model/produto";
 import { Observable, EMPTY } from "rxjs";
-import { map, catchError } from "rxjs/operators";
+import { map, catchError, retry } from "rxjs/operators";
 
 @Injectable({
   providedIn: "root",
@@ -11,8 +11,17 @@ import { map, catchError } from "rxjs/operators";
 export class ProductService {
   baseUrl = "http://localhost:3000/products";
 
+    //as credencias de acesso/autorização ao dominio
+  // e colocar dados no dominio cruzado
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
+  }
+
   constructor(private snackBar: MatSnackBar, private http: HttpClient) {}
 
+  //Função generica para mostrar mensagens depois de cada ação
   showMessage(msg: string, isError: boolean = false): void {
     this.snackBar.open(msg, "X", {
       duration: 3000,
@@ -22,9 +31,11 @@ export class ProductService {
     });
   }
 
+  //Metodo Post - criar novo produdo
   create(product: Product): Observable<Product> {
-    return this.http.post<Product>(this.baseUrl, product).pipe(
-      map((obj) => obj),
+    return this.http.post<Product>(this.baseUrl, JSON.stringify(product), this.httpOptions)
+    .pipe(
+      retry(1),
       catchError((e) => this.errorHandler(e))
     );
   }
