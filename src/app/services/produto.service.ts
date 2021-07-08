@@ -57,7 +57,9 @@ export class ProductService {
   }
 
   update(product: Product): Observable<Product> {
-    return this.http.put<Product>(this.baseUrl+"/", JSON
+    console.log(product)
+    console.log(this.baseUrl+"/"+product.id)
+    return this.http.put<Product>(this.baseUrl+"/"+product.id, JSON
     .stringify(product), this.httpOptions)
     .pipe(
       retry(1),
