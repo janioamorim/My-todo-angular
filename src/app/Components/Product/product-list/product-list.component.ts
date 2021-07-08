@@ -20,7 +20,7 @@ export class ProductReadComponent implements OnInit {
     })
   }
 
-  
+
 
 
 }
