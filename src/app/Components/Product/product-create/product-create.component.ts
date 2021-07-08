@@ -3,10 +3,7 @@ import { ProductService } from 'src/app/services/produto.service';
 import { Router } from '@angular/router';
 import { Product } from 'src/app/model/produto';
 
-import {FormBuilder, FormControl, FormGroup, FormGroupDirective, NgForm, Validators} from '@angular/forms';
-import {ErrorStateMatcher} from '@angular/material/core';
-
-
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 @Component({
   selector: 'app-product-create',
   templateUrl: './product-create.component.html',
@@ -22,7 +19,7 @@ export class ProductCreateComponent implements OnInit {
 
       formData: FormGroup = this.formBuild.group({
         name: ['', Validators.required],
-        price: ['', Validators.required],
+        price: ['', [Validators.required, this.validateNumber]],
         type: ['', Validators.required]
       })
       
@@ -30,7 +27,7 @@ export class ProductCreateComponent implements OnInit {
       ngOnInit(){     
       }
 
-      validacaoNumber(formcontrol:any) {
+      validateNumber(formcontrol:any) {
         if (isNaN(formcontrol.value)) {
          return {"price" : true};
         }
