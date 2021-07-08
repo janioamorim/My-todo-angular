@@ -5,12 +5,6 @@
       "price": "2.60",
       "id": 1,
       "type": "Bebida"
-    },
-    {
-      "name": "Café",
-      "price": "25.60",
-      "id": 2,
-      "type": "Bebida"
     }
   ]
 }
