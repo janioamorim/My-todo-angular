@@ -11,18 +11,6 @@
       "price": "25.60",
       "id": 2,
       "type": "Bebida"
-    },
-    {
-      "name": "teste",
-      "price": "14",
-      "type": "comestivel",
-      "id": 3
-    },
-    {
-      "name": "arroz",
-      "price": "1000",
-      "type": "12",
-      "id": 4
     }
   ]
 }

@@ -15,7 +15,6 @@ export class ProductDeleteComponent implements OnInit {
   //casting produto
   product: any = {};
 
-  // Injecao dos
   constructor(
     private productService: ProductService,
     private router: Router,
