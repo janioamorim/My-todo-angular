@@ -1,5 +1,5 @@
 <mat-card>
-  <mat-card-title>Novo</mat-card-title>
+  <mat-card-title>Novo Produto</mat-card-title>
   <form (ngSubmit)="createProduct()" name="formData" [formGroup]="formData">
     <mat-form-field>
       <input matInput [(ngModel)]="product.name" formControlName="name" placeholder="Produto" >
