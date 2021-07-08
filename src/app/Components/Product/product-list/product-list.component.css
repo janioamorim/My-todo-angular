@@ -1,5 +1,6 @@
 table {
   width: 100%;
+
 }
 
 .edit {
@@ -7,9 +8,13 @@ table {
 }
 
 .edit > i {
-  color: #26c1d9;
+  color: #087a8b;
 }
 
 .delete > i {
   color: #a20f1e;
+}
+th{
+  background-color: #130044;
+  color: white;
 }
