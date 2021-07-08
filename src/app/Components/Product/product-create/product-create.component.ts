@@ -22,9 +22,9 @@ export class ProductCreateComponent implements OnInit {
         price: ['', [Validators.required, this.validateNumber]],
         type: ['', Validators.required]
       })
-      
-     
-      ngOnInit(){     
+
+
+      ngOnInit(){
       }
 
       validateNumber(formcontrol:any) {
@@ -36,22 +36,23 @@ export class ProductCreateComponent implements OnInit {
 
   //Metodo que chama o service
   //cria o novo produto
-  createProduct(): void {    
+  createProduct(): void {
     if (this.formData.valid) {
       this.productService.create(this.product).subscribe(() => {
         this.productService.showMessage('Produto criado!')
         this.router.navigate(['/products'])
       })
-    
+
     }else{
       return
     }
 
   }
 
+  // Ao cancelar voltar pro home
   cancel():void {
-    this.router.navigate(['products'])
+    this.router.navigate([''])
   }
 
-  
+
 }
