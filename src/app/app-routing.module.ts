@@ -10,6 +10,9 @@ import { ProductDeleteComponent } from "./Components/Product/product-delete/prod
 
 const routes: Routes = [
   {
+    path: '', pathMatch:'full', redirectTo:'ProductCreate'
+  },
+  {
     path: "",
     component: HomeComponent
   },

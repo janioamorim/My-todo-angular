@@ -11,7 +11,7 @@ import { Product } from 'src/app/model/produto';
 export class ProductCreateComponent implements OnInit {
 
   //Fazendo Casting do nosso produto
-  product: Product = { name:'', price: 0 }
+  product: Product = { name:'', price: 0, type: '' }
 
   constructor(
      private restApi: ProductService,
@@ -25,7 +25,7 @@ export class ProductCreateComponent implements OnInit {
   //cria o novo produto
   createProduct(): void {
     this.restApi.create(this.product).subscribe( ()=>{
-       //this.restApi.showMessage('Produto Criado')
+       this.restApi.showMessage('Produto Criado')
        this.router.navigate(['/products'])
     })
   }

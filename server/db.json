@@ -3,27 +3,26 @@
     {
       "name": "Agua",
       "price": "2.60",
-      "id": 1
+      "id": 1,
+      "type": "Bebida"
     },
     {
       "name": "Café",
       "price": "25.60",
-      "id": 2
+      "id": 2,
+      "type": "Bebida"
     },
     {
       "name": "Café 2",
       "price": "25.60",
-      "id": 3
+      "id": 3,
+      "type": "Bebida"
     },
     {
       "name": "",
       "price": 0,
+      "type": "",
       "id": 4
-    },
-    {
-      "name": "",
-      "price": 0,
-      "id": 5
     }
   ]
 }
