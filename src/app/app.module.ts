@@ -29,7 +29,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { ProductCrudComponent } from './views/product-crud/product-crud.component';
 import { ProductCreateComponent } from './Components/Product/product-create/product-create.component';
 import { ProductDeleteComponent } from './Components/Product/product-delete/product-delete.component';
-import { ProductReadComponent } from './Components/Product/product-read/product-read.component';
+import { ProductReadComponent } from './Components/Product/product-list/product-list.component';
 import { ProductUpdateComponent } from './Components/Product/product-update/product-update.component';
 
 

@@ -50,29 +50,31 @@ export class ProductService {
 
   //Metodo para listar por id
   readById(id: number): Observable<Product> {
-    const url = `${this.baseUrl}/${id}`;
-    return this.http.get<Product>(url).pipe(
+    return this.http.get<Product>(this.baseUrl+"/"+id).pipe(
       map((obj) => obj),
       catchError((e) => this.errorHandler(e))
     );
   }
 
   update(product: Product): Observable<Product> {
-    const url = `${this.baseUrl}/${product.id}`;
-    return this.http.put<Product>(url, product).pipe(
-      map((obj) => obj),
+    return this.http.put<Product>(this.baseUrl+"/", JSON
+    .stringify(product), this.httpOptions)
+    .pipe(
+      retry(1),
       catchError((e) => this.errorHandler(e))
     );
   }
 
+  //deletar por Id
   delete(id: number): Observable<Product> {
-    const url = `${this.baseUrl}/${id}`;
-    return this.http.delete<Product>(url).pipe(
-      map((obj) => obj),
+    return this.http.delete<Product>(this.baseUrl+"/"+id, this.httpOptions)
+    .pipe(
+      retry(1),
       catchError((e) => this.errorHandler(e))
     );
   }
 
+  // tratamento do erro
   errorHandler(e: any): Observable<any> {
     this.showMessage("Ocorreu um erro!", true);
     return EMPTY;

@@ -3,9 +3,9 @@ import { Product } from 'src/app/model/produto';
 import { ProductService } from 'src/app/services/produto.service';
 
 @Component({
-  selector: 'app-product-read',
-  templateUrl: './product-read.component.html',
-  styleUrls: ['./product-read.component.css']
+  selector: 'app-product-list',
+  templateUrl: './product-list.component.html',
+  styleUrls: ['./product-list.component.css']
 })
 export class ProductReadComponent implements OnInit {
 
@@ -19,6 +19,8 @@ export class ProductReadComponent implements OnInit {
       this.products = products
     })
   }
+
+  
 
 
 }
